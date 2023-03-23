@@ -12,28 +12,31 @@ int main()
 	cout<<"Enter the file name: ";
 	cin>>fname;
 
-	vector<vector<string>> content;
-	vector<string> row;
-	string line, word;
+	vector<vector<string>> content;          //creating the vector for the whole "table"
+	vector<string> row;                      // creating the vector for each row
+	string line, word;                        
 
 	fstream file (fname, ios::in);
-	if(file.is_open())
+	if(file.is_open())                      
 	{
-		while(getline(file, line))
+		while(getline(file, line))       //while there is a line to the file
 		{
-			row.clear();
+			row.clear();             //clear the row vector for the next line to be stored
 
 			stringstream str(line);
 
-			while(getline(str, word, ','))
-				row.push_back(word);
-			content.push_back(row);
+			while(getline(str, word, ','))    
+				row.push_back(word);      // extracting the words and adding them as elements to the row vector
+			content.push_back(row);           //pushing each row as element to the "whole table"/content vector
 		}
 	}
 	else
 		cout<<"Could not open the file\n";
 
-	for(int i=0;i<content.size();i++)
+	
+	//Code for printing the contents
+	
+	for(int i=0;i<content.size();i++) 
 	{
 		for(int j=0;j<content[i].size();j++)
 		{
