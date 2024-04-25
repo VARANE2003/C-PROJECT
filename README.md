@@ -7,8 +7,8 @@ PURPOSE:  EASY for further experimentation on the contents of the CSV file by th
 
 <h2>Languages and Utilities Used</h2>
 
-
-
+- C++
+- Python (Soon...)
 
 
 
