@@ -14,7 +14,7 @@ Soon...
 <h2>Languages and Utilities Used</h2>
 
 - C++
-- Python (Soon...)
+- Python 
 
 
 
